@@ -1,22 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  @apply box-border
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -24,4 +16,38 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.font-secondary {
+  font-family: "Caveat", cursive;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.theme-container {
+  @apply max-w-[1440px] mx-auto px-[16px] md:px-[40px] xl:px-[80px] 2xl:px-[120px];
+}
+
+.carousel-container {
+  width: 100%;
+  max-width: 1440px; /* Adjust this value for different screen sizes */
+  margin: 0 auto;
+}
+
+.swiper-container {
+  padding-bottom: 50px;
+}
+
+
+.swiper-slide {
+  transform-origin: center center;
+  transition: transform 0.5s ease;
+}
+
+.swiper-container {
+  overflow: visible;
+}
+
+.swiper-wrapper {
+  @apply !translate-x-[calc(40%)] md:!translate-x-[calc(38%)] lg:!translate-x-[calc(40%)] xl:!translate-x-[calc(43%)]
 }
